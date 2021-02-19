@@ -9,7 +9,7 @@ context('Actions', () => {
     it('should render sketchpad and draw blank canvas', () => {
         cy.get('.input').should("exist")
         cy.get('.input').click()
-        cy.get('.input').type('c 20 4')
+        cy.get('.input').type('n 20 4')
         cy.get('.input').type('{enter}')
 
         cy.get('.tile > .container').should("exist")
@@ -25,7 +25,7 @@ context('Actions', () => {
     it('should render lines', () => {
         cy.get('.input').should("exist")
         cy.get('.input').click()
-        cy.get('.input').type('c 20 4')
+        cy.get('.input').type('n 20 4')
         cy.get('.input').type('{enter}')
         cy.get('.input').clear()
         cy.get('.input').type('l 1 2 6 2')
@@ -44,7 +44,7 @@ context('Actions', () => {
     it('should render fill and retain even with error ', () => {
         cy.get('.input').should("exist")
         cy.get('.input').click()
-        cy.get('.input').type('c 20 4')
+        cy.get('.input').type('n 20 4')
         cy.get('.input').type('{enter}')
         cy.get('.input').clear()
         cy.get('.input').type('b 10 3 .')
@@ -68,7 +68,7 @@ context('Actions', () => {
     it('should render All', () => {
         cy.get('.input').should("exist")
         cy.get('.input').click()
-        cy.get('.input').type('c 20 4')
+        cy.get('.input').type('n 20 4')
         cy.get('.input').type('{enter}')
         cy.get('.input').clear()
         cy.get('.input').type('l 1 2 6 2')

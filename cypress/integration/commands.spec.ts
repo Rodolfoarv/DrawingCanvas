@@ -9,7 +9,7 @@ context('Actions', () => {
     it('should have the console tool open and have basic structure', () => {
         cy.get('.input').should("exist")
         cy.get('.input').click()
-        cy.get('.input').type('c 20 4')
+        cy.get('.input').type('n 20 4')
 
         cy.get('.tile > .container').should("not.exist")
         cy.get('.is-ancestor > :nth-child(1) > .tile').should("exist")

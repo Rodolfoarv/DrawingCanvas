@@ -5,10 +5,17 @@ export const envVar = {
     verticalStyle: process.env.REACT_APP_VERTICAL_STYLE || "|",
     xMax: process.env.REACT_APP_HORIZONTAL_MAX || 30,
     yMax: process.env.REACT_APP_VERTICA_MAX || 10,
+    lineGlyph: "x"
 }
 
+export const readCommand = (cmd: string) : string[] => {
+    if(cmd){
+       return cmd.trim().toUpperCase().split(" ");
+    }
+    return [];
+}
 
-
+export const isValidFormat = (cmd: string []): boolean => cmd && cmd.length >0;
 
 
 export const isNumberOfPropsCorrect =

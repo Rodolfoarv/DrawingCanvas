@@ -7,5 +7,36 @@ import {Rectangle} from "../shapes/Rectangle";
 
 
 export const RectangleCommand = (props: CommandType): JSX.Element => {
-    return (<></>)
+
+    const [error, setError] = useState("");
+    const [coordinates, setCoordinates] = useState();
+
+    useEffect(() => {
+        setError("");
+
+        if (!isNumberOfPropsCorrect(props.command, 5)) {
+            setError("Invalid Command : Try R x y x2 y2");
+        }
+        if (!doesCanvasExist(global.canvas)) {
+            setError("Canvas Doesnt exist");
+        }
+
+        const startY =  Number(props.command[1]);
+        const startX =  Number(props.command[2]);
+        const endY =  Number(props.command[3]);
+        const endX =  Number(props.command[4]);
+        if(beyondCanvasRange(startX, startY, global.canvas) ||
+            beyondCanvasRange(endX, endY, global.canvas) ){
+            setError(`Beyond Canvas Range:  ${global.canvas.width} x ${global.canvas.height} `);
+        }else {
+            setCoordinates({
+                startX,startY,endX,endY,shape: "Rectangle"
+            });
+        }
+    }, [props]);
+
+
+
+    return (error === "") ? (<Rectangle {...coordinates}/>) :
+        <InvalidCommand error={error}/>;
 }

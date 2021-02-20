@@ -5,7 +5,6 @@ import {InvalidCommand} from "./InvalidCommand";
 import {CommandType} from "../../types/component";
 import {Fill} from "../shapes/Fill";
 import { envVar } from "../../utils/utils";
-import { env } from "process";
 
 
 export const FillCommand = (props: CommandType): JSX.Element => {

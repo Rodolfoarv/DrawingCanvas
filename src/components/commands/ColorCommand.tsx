@@ -4,11 +4,7 @@ import global, { dummyShape } from "../../store/global";
 
 import { InvalidCommand } from "./InvalidCommand";
 import { CommandType } from "../../types/component";
-import { Fill } from "../shapes/Fill";
 import { envVar, setCanvasColor } from "../../utils/utils";
-import { Canvas } from "../shapes/Canvas";
-import {Shape} from "../shapes/Shape";
-import {Undo} from "../shapes/Undo";
 
 export const ColorCommand = (props: CommandType): JSX.Element => {
   const [error, setError] = useState("");

@@ -9,7 +9,6 @@ import {FillCommand} from "./FillCommand";
 import global from "../../store/global";
 import {UndoCommand} from "./UndoCommand";
 import {ColorCommand} from "./ColorCommand"
-import {Line} from "../shapes/Line";
 
 const ClearCommand = (): JSX.Element => {
     global.canvas.reset();

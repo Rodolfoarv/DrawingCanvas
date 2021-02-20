@@ -20,8 +20,8 @@ export const Undo = (props: UndoProps) => {
                 setRemoveFill({...props})
             }
 
-        }else if(props.shape === "C"){
-             {
+        }else if(props.shape === "N"){
+            {
                 global.canvas.reset();
             }
         } else if(props.shape === "L" ||

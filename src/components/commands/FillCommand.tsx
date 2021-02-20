@@ -4,6 +4,8 @@ import global from "../../store/global";
 import {InvalidCommand} from "./InvalidCommand";
 import {CommandType} from "../../types/component";
 import {Fill} from "../shapes/Fill";
+import { envVar } from "../../utils/utils";
+import { env } from "process";
 
 
 export const FillCommand = (props: CommandType): JSX.Element => {
@@ -12,16 +14,17 @@ export const FillCommand = (props: CommandType): JSX.Element => {
     useEffect(() => {
         setError("");
 
-        if (!isNumberOfPropsCorrect(props.command, 4)) {
-            setError("Invalid Command : ( Try: F x y color)");
+        if (!isNumberOfPropsCorrect(props.command, 3)) {
+            setError("Invalid Command : ( Try: B x y)");
         }
         if (!doesCanvasExist(global.canvas)) {
             setError("Canvas Doesnt exist");
         } else {
+            console.log(envVar.color)
             setCoordinates({
                 fromX: Number(props.command[1]),
                 fromY: Number(props.command[2]),
-                color: (props.command[3]),
+                color: "o",
             });
         }
     }, [props]);

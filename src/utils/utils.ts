@@ -5,7 +5,8 @@ export const envVar = {
     verticalStyle: process.env.REACT_APP_VERTICAL_STYLE || "|",
     xMax: process.env.REACT_APP_HORIZONTAL_MAX || 30,
     yMax: process.env.REACT_APP_VERTICA_MAX || 10,
-    lineGlyph: "x"
+    lineGlyph: "x",
+    color: ""
 }
 
 export const readCommand = (cmd: string) : string[] => {
@@ -32,6 +33,15 @@ export const doesCanvasExist =
         return canvas? canvas.width > 0 &&
             canvas.height >0: false;
 }
+
+export const setCanvasColor = (color: string) : boolean => {
+    if (color){
+        console.log(color);
+        envVar.color = color;
+        return true; 
+    }
+    return false;
+} 
 
 /**
  * assumes that the x y are coordinates starting from 0 and

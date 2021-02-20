@@ -1,5 +1,5 @@
 export interface UndoProps {
-    shape: "L" | "R" | "B" | "C";
+    shape: "L" | "R" | "B" | "N";
     fromX: number;
     fromY: number;
     endX?: number;

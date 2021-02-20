@@ -34,13 +34,15 @@ export default function CommandsFactory (
         Q: ClearCommand,
         B: FillCommand,
         U: UndoCommandCopy,
-        C: ColorCommand, 
+        C: ColorCommand,
         default : InvalidCommandWithError
     };
+    
     if(!isValidFormat(props.command)){
         return <InvalidCommand error={"Invalid Input Format"} />;
     }
     const cmdType = props.command[0] + "";
+
     // @ts-ignore
     return (commands[cmdType] || commands.default)(props)
 }

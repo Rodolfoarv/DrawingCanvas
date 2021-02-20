@@ -4,6 +4,8 @@ This project is part of the challenge for Evenito's Coding problem
 
 # Live demo
 
+https://cranky-mayer-3e66e6.netlify.app/
+
 # Demo
 
 ![Evenito](/public/evenitoDemo.gif)
@@ -81,3 +83,27 @@ yarn test
 ```
 
 # Sample I/O
+
+## Command: N 20 4
+
+![1](/public/1.png)
+
+## Command: L 1 2 6 2
+
+![Doggo](/public/2.png)
+
+## Command: L 6 3 6 4
+
+![Doggo](/public/3.png)
+
+## Command: R 16 1 20 3
+
+![Doggo](/public/4.png)
+
+## Command: C O
+
+## Command: B 10 3
+
+![Doggo](/public/5.png)
+
+# Thank you

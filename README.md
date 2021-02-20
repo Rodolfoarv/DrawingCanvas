@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Evenito Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of the challenge for Evenito's Coding problem
 
-## Available Scripts
+# Live demo
 
-In the project directory, you can run:
+# Demo
 
-### `yarn start`
+![Evenito](/public/evenitoDemo.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Objective:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Create a console application where users are able to do the following:
 
-### `yarn test`
+1. create a new canvas;
+2. draw on the canvas by issuing various commands;
+3. quit.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Command specifications
 
-### `yarn build`
+- N w h Create a new canvas of width w and height h.
+  L x1 y1 x2 y2 Create a new line from (x1,y1) to (x2,y2). Currently
+  only horizontal or vertical lines are supported. Horizontal and
+  vertical lines will be drawn using the selected colour.
+- R x1 y1 x2 y2 Create a new rectangle, whose upper left corner is
+  (x1,y1) and lower right corner is (x2,y2). Horizontal and vertical
+  lines will be drawn using the selected colour.
+- B x y Fill the entire area connected to (x,y) with
+  selected colour. The behaviour of this is the same as that of the
+  "bucket fill" tool in paint programs.
+- C c Set the selected colour to “c”. The default colour
+  is “x”.
+- Q Quit the program.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Extra features developed outside from Coding Challenge :)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Log Feature: Users are able to see their command log history
+- Undo Feature: Users are able to undo the last command.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Tech stack
 
-### `yarn eject`
+- "react": "^16.13.1",
+- Typescript: Used for better type checks and cleaner code read
+- Global state: In order to share the state of the application between the components
+- JEST for **testing** and ensuring the **quality** of the code
+- Cypress.io for E2E tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Why did I decide using React?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Eventhough this could have been done in Python :) which I take as my favorite programming language, I decided to use React so users could have a better UI / UX experience
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Pull requests
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Every "small feature" was developed in a separated pull request with the commits associated to it. This is a common practice I follow, afterwards someone reviews my PR or do a Pair Programming exercise to ensure the quality and coding standards of the feature being developed.
 
-## Learn More
+## Who reviewed my PR's ?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+My friend's dog was in charge with the mission of reviewing my PRs in exchange for food.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Doggo](/public/doggo.jpg)
 
-### Code Splitting
+# How to execute in your local machine?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+git clone https://github.com/Rodolfoarv/Evenito.git
+cd Evenito
+yarn install
+yarn start
+```
 
-### Analyzing the Bundle Size
+Open http://localhost:3000 in your browser
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# How to run Tests?
 
-### Making a Progressive Web App
+React Testing Library was used for Unit Testing. Cypress.io was used for E2E tests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Execute the following command to run tests:
 
-### Advanced Configuration
+```
+yarn test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Sample I/O

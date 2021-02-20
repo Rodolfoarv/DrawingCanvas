@@ -29,7 +29,7 @@ export const UndoCommand = (props: CommandType): JSX.Element => {
                 setCoordinates({fromX: Number(props.command[2]),
                     fromY: Number(props.command[3]),
                     color: " ", shape});
-            }else if(shape === "C"){
+            }else if(shape === "N"){
                 global.canvas.reset();
                 console.log("After REset " + global.canvas.width );
             } else if(shape === "L" ||

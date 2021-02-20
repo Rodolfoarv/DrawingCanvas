@@ -10,7 +10,7 @@ let documentBody: RenderResult;
 test('Should render a CanvasCommand', () => {
 
     documentBody = render(
-        <CommandsFactory command={["C","10","10"]}/>
+        <CommandsFactory command={["N","10","10"]}/>
     );
     var linkElement = documentBody.getAllByText("-");
     expect(linkElement).toBeDefined();
@@ -20,7 +20,7 @@ test('Should render a CanvasCommand', () => {
 test('Should render a Invalid Command for wrong parameters', () => {
 
     documentBody = render(
-        <CommandsFactory command={["C","10"]}/>
+        <CommandsFactory command={["N","10"]}/>
     );
     var linkElement = documentBody.getByText("ERROR: Invalid Command");
     expect(linkElement).toBeInTheDocument();

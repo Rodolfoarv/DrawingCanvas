@@ -24,7 +24,7 @@ export const FillCommand = (props: CommandType): JSX.Element => {
             setCoordinates({
                 fromX: Number(props.command[1]),
                 fromY: Number(props.command[2]),
-                color: "o",
+                color: envVar.color.toString().toLowerCase(),
             });
         }
     }, [props]);

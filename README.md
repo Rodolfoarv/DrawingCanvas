@@ -1,6 +1,6 @@
-# Evenito Demo
+# Drawing Canvas
 
-This project is part of the challenge for Evenito's Coding problem
+This project is done for test purposes with JEST and Cypress in order to practice it, along with it, it contains a simple Drawing application that allows the user to graph and draw in a Canvas.
 
 # Live demo
 
@@ -33,9 +33,6 @@ Create a console application where users are able to do the following:
 - C c Set the selected colour to “c”. The default colour
   is “x”.
 - Q Quit the program.
-
-## Extra features developed outside from Coding Challenge :)
-
 - Log Feature: Users are able to see their command log history
 - Undo Feature: Users are able to undo the last command.
 
@@ -47,13 +44,9 @@ Create a console application where users are able to do the following:
 - JEST for **testing** and ensuring the **quality** of the code
 - Cypress.io for E2E tests
 
-## Why did I decide using React?
-
-Eventhough this could have been done in Python :) which I take as my favorite programming language, I decided to use React so users could have a better UI / UX experience
-
 # Pull requests
 
-Every "small feature" was developed in a separated pull request with the commits associated to it. This is a common practice I follow, afterwards someone reviews my PR or do a Pair Programming exercise to ensure the quality and coding standards of the feature being developed.
+Since this a personal project I needed extra help to develop it! In this case someone special was in charge of reviewing my PRs so I did not mess anything up :)
 
 ## Who reviewed my PR's ?
 
@@ -64,8 +57,8 @@ My friend's dog was in charge with the mission of reviewing my PRs in exchange f
 # How to execute in your local machine?
 
 ```
-git clone https://github.com/Rodolfoarv/Evenito.git
-cd Evenito
+git clone https://github.com/Rodolfoarv/DrawingCanvas.git
+cd DrawingCanvas
 yarn install
 yarn start
 ```
@@ -107,3 +100,5 @@ yarn test
 ![Doggo](/public/5.png)
 
 # Thank you
+
+

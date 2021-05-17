@@ -6,6 +6,6 @@ import '@testing-library/jest-dom';
 
 test('renders App', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/Evenito Demo/i);
+  const linkElement = getByText(/Drawing Canvas 😊/i);
   expect(linkElement).toBeInTheDocument();
 });

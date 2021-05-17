@@ -44,6 +44,7 @@ export const HomeScreen = () : JSX.Element => {
                 <div className="tile is-parent">
                     <div className="tile is-child box">
                         <p className="subtitle"> Input a command to start drawing! 🙂 </p>
+
                         { command && <CanvasBoard command={command} /> }
                     </div>
                 </div>

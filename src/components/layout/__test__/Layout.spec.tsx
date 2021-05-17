@@ -13,7 +13,7 @@ describe('<Layout />', () => {
                 <p>Dummy</p>
             </Layout>
         );
-        expect(documentBody.getByText("Evenito Demo")).toBeDefined();
+        expect(documentBody.getByText("Drawing Canvas 😊")).toBeDefined();
         expect(documentBody.getByText("Dummy")).toBeDefined();
         expect(documentBody.getByText("Rodolfo Andrés Ramírez Valenzuela")).toBeDefined();
     });

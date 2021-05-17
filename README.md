@@ -1,6 +1,19 @@
 # Drawing Canvas
 
-This project is done for test purposes with JEST and Cypress in order to practice it, along with it, it contains a simple Drawing application that allows the user to graph and draw in a Canvas.
+This project was done just for fun :)
+
+I wanted to try some React concepts and to have a repository anyone could reference that highlights the most common concepts in React such as:
+
+- Creation of components
+- Typescript
+- Store
+- Migration from a class component to a functional component
+- UI construction
+- Unit testing
+- End to end testing
+- Hooks
+
+Feel free to use the project as you like and to switch to any PR to see the development of any particular feature, if there is any question feel free to hit me up.
 
 # Live demo
 
@@ -8,7 +21,7 @@ https://cranky-mayer-3e66e6.netlify.app/
 
 # Demo
 
-![Evenito](/public/evenitoDemo.gif)
+![Evenito](/public/demo.gif)
 
 ## Objective:
 
@@ -100,5 +113,3 @@ yarn test
 ![Doggo](/public/5.png)
 
 # Thank you
-
-
